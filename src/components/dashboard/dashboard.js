@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Dashboard = () => {
-  let registered = false;
-
+const Dashboard = ({ token }) => {
   return (
     <div className="container">
       <div>
