@@ -1,6 +1,6 @@
 # Wizbii Technical Test
 
-[Instructions test] (https://github.com/remialvado/wizbii-technical-test/blob/master/frontend.md)
+[Instructions test](https://github.com/remialvado/wizbii-technical-test/blob/master/frontend.md)
 
 ## Launch project : `yarn start`
 
