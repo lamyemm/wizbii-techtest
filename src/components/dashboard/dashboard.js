@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Profiler } from 'react'
+import React, { useState, useEffect } from 'react'
 import Post from './../post/post'
 import './dashboard.css'
 
@@ -58,7 +58,6 @@ const Dashboard = (props) => {
     }, 1000)
     setLoading(false)
   }, [])
-
 
   return (
     <div>
