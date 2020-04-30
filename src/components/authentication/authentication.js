@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-const Authentication = ({ auth }) => {
+const Authentication = () => {
   return (
     <div>
       <h2>You must first log in to continue</h2>
