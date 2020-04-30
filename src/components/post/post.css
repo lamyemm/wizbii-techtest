@@ -1,0 +1,105 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 3px;
+    grid-auto-rows: minmax(60px, auto);
+    margin-bottom: 50px;
+    padding: 5px;
+  }
+  .one {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    margin: 0 8px;
+    padding: 1px;
+  }
+  .two { 
+    grid-column: 2 / 3;
+    grid-row: 1;
+    margin: 0 8px;
+    padding: 1px;
+  }
+  .three {
+    grid-column: 3/7;
+    grid-row: 1;
+    margin: 0 8px;
+    padding: 1px;
+    color: #949494;
+  }
+  .four {
+    grid-column: 1 / 11;
+    grid-row: 2;
+    margin: 0 8px;
+    padding: 1px;
+    margin-left: 3px;
+  }
+  .five {
+    grid-column: 1 / 11;
+    grid-row: 3 ;
+    text-align: justify;
+    margin: 0 8px;
+    padding: 1px;
+  }
+  .six {
+    grid-column: 1 / 5;
+    grid-row: 5;
+    margin: 0 8px;
+    padding: 1px;
+    text-align: center;
+    color: #949494;
+  }
+
+  .seven {
+    grid-column: 6 / 10;
+    grid-row: 5;
+    margin: 0 8px;
+    padding: 1px;
+    text-align: center;
+    color: #949494;
+  }
+
+  .eight {
+    grid-column: 1 / 8;
+    grid-row: 6;
+    margin: 0 8px;
+    padding: 1px;
+    color: #949494;
+  }
+
+  .nine {
+    grid-column: 1 / 11;
+    grid-row: 7 ;
+    margin: 0 8px;
+    padding: 1px;
+    color: #949494;
+  }
+
+  .ten {
+    grid-column: 1 / 11;
+    grid-row: 8 ;
+    background-color: #f5f5f5;
+    margin: 0 8px;
+    padding: 1px;
+    color: #949494;
+  }
+
+  .eleven {
+    grid-column: 1 / 11;
+    grid-row: 9 ;
+    margin: 2px 8px;
+    padding: 1px;
+    color: #949494;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .bubble {
+      max-width: 40px;
+  }
+
+  .hashtags {
+      font-weight: bold;
+  }
+  .specialtext {
+      color: #4db7e7;
+      font-weight: bold;
+  }

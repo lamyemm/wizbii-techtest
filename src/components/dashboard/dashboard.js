@@ -1,7 +1,10 @@
 import React, { useState, useEffect, Profiler } from 'react'
+import Post from './../post/post'
+import './dashboard.css'
 
 const Dashboard = (props) => {
   const [dashboard, setDashboard] = useState([])
+  const [loading, setLoading] = useState(true)
 
   async function fetchPost(token) {
     const requestOptions = {
@@ -26,47 +29,50 @@ const Dashboard = (props) => {
     setTimeout(() => {
       setDashboard([
         {
+          id: '17b',
           profile: {
             username: 'Sophia Smith',
-            pictureSrc: './profile.png',
             age: 25,
             city: 'Grenoble',
           },
           tags: ['#management', '#marketing', '#community', 'communication'],
           postContent:
-            'Salut, je suis Ilona. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus eveniet neque odit adipisci quas, ad culpa blanditiis nulla at nostrum consequuntur molestiae delectus fugit placeat cum quam unde ea? Repudiandae.',
+            'Hello, je suis Sophia Smith. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus eveniet neque odit adipisci quas, ad culpa blanditiis nulla at nostrum consequuntur molestiae delectus fugit placeat cum quam unde ea? Repudiandae.',
           thanx: 1,
-          comments: 0,
+          comments: 6,
         },
         {
+          id: '77b',
           profile: {
             username: 'Ilona Lefeuvre',
-            pictureSrc: './profile.png',
             age: 17,
             city: 'Paris',
           },
-          tags: ['#management', '#marketing', '#community', 'communication'],
+          tags: ['#management', '#development', '#community', 'communication'],
           postContent:
-            'Salut, je suis Ilona. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus eveniet neque odit adipisci quas, ad culpa blanditiis nulla at nostrum consequuntur molestiae delectus fugit placeat cum quam unde ea? Repudiandae.',
-          thanx: 1,
+            'Salut, je suis Ilona. Lorem ipsum dolor sit, amet consectetur adipisicing elit. stiae delectus fugit placeat cum quam unde ea? Repudiandae.',
+          thanx: 3,
           comments: 0,
         },
       ])
     }, 1000)
-  
+    setLoading(false)
   }, [])
 
-  if (!dashboard) {
-    return <div>Loading...</div>
-  }
 
   return (
     <div>
-      {/* <p>{dashboard[1].username}</p>
-      <strong>{dashboard[1].age}</strong> years old */}
-      {/* TODO : map over dashboard object and render component post */}
-      <br />
-      <p>Posts</p>
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className="main">
+          <div>
+            {dashboard.map((dashboard) => (
+              <Post {...dashboard} key={dashboard.id} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
